@@ -1,6 +1,8 @@
 const validValue = (v: unknown): v is string => typeof v === "string" && v.length > 0
 export default defineFormActions({
   default: async (event) => {
+    console.log('H3 Param')
+
     const formData = await readFormData(event)
     const email = formData.get("email")
     const password = formData.get("password")
